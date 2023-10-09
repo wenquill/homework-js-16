@@ -1,0 +1,128 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: url(https://img.freepik.com/free-photo/forest-of-tall-trees-during-autumn_250224-71.jpg?w=1380&t=st=1696839845~exp=1696840445~hmac=3d34bcdce2b982ea7f1cec86dec7086838f4a5d5709521565a2457bd42966461);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.774);
+  background-color: #ffffff1f;
+}
+.container h1 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+.container p {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+.input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #ffffff;
+}
+.column .input-box {
+    align-self: flex-end;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #000000;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 10px;
+}
+.select-box {
+    background-color: #ffffff;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+  background-color: #ffffff3d;
+}
+textarea {
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  margin-top: 30px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+.form button:hover {
+  background: rgba(255, 255, 255, 0.637);
+  color: #333;
+  border: none;
+}
+small {
+    padding-left: 10px;
+    color: red;
+    display: none;
+}
+.error {
+    border-color: red;
+}
+
+.input-box input:valid {
+  border: 1px solid green;
+}
+.input-box input:invalid {
+  border: 1px solid red;
+} 
+
+@media screen and (max-width: 540px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
